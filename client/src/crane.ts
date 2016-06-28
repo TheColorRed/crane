@@ -138,7 +138,7 @@ export default class Crane
         });
 
         var types = Config.phpFileTypes;
-        Debug.info(`Watching these files: {${types.include.join(',')}}`);
+        Debug.info(`Watching these file patterns: {${types.include.join(',')}}`);
 
         var fsw: FileSystemWatcher = workspace.createFileSystemWatcher(`{${types.include.join(',')}}`);
         fsw.onDidChange(e => {
